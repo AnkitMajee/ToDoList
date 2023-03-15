@@ -21,43 +21,6 @@ var options={
   var day= today.toLocaleDateString("en-IN",options);
 
 res.render('List', {listTitle: day, newListItems: items});
-
-// var day="";
-// switch(currentDay){
-//   case 0:
-//    day="Sunday";
-//    break;
-//    case 1:
-//     day="Monday";
-//     break;
-//     case 2:
-//      day="Tuesday";
-//      break;
-//      case 3:
-//       day="Wednesday";
-//       break;
-//       case 4:
-//        day="Thursday";
-//        break;
-//        case 5:
-//         day="Saturday";
-//         break;
-//         case 6:
-//          day="Sunday";
-//          break;
-//          default:
-//          console.log("Error: Current day is equal to:"+ currentDay);
-// }
-  // if(today.getDay()=== 6|| today.getDay()===0){
-  //   day="Weekend";
-  // }
-  // else{
-  //   day="weekday";
-    // res.sendFile(__dirname+"/index.html")
-    // res.write("<p>It is not the weekend!</p>") // to send many message at a time we use res.write
-    // res.write("<h1>Boo I have to work</h1>");
-    // res.send(); // to send the message
-
 });
 
 app.post("/",function(req,res){
@@ -75,11 +38,6 @@ app.post("/",function(req,res){
 app.get("/work", function(req,res){
   res.render("list",{listTitle:"Work List", newListItems:workItems});
 });
-
-// app.post("/work",function(req,res){
-//   let item=req.body.newItem;
-// })
-
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("server started");
